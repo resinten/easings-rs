@@ -3,5 +3,7 @@ name = "easings-rs"
 version = "0.1.0"
 authors = ["Brian West <brian@bwest.me>"]
 edition = "2018"
+description = "Simple easings crate without any bells and whistles"
+license = "0BSD"
 
 [dependencies]
