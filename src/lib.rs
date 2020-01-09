@@ -128,12 +128,12 @@ pub fn ease(easing: Easing, x: f32) -> f32 {
 
         // Circ
         Easing::CircIn => 1.0 - (1.0 - x.powf(2.0)).sqrt(),
-        Easing::CircOut => (1.0 - x.powf(2.0)).sqrt(),
+        Easing::CircOut => (1.0 - (x - 1.0).powf(2.0)).sqrt(),
         Easing::CircInOut => {
             if x < 0.5 {
                 (1.0 - (1.0 - (2.0 * x).powf(2.0)).sqrt()) / 2.0
             } else {
-                (1.0 - (x - 1.0).powf(2.0)).sqrt()
+                ((1.0 - (-2.0 * x + 2.0).powf(2.0)).sqrt() + 1.0) / 2.0
             }
         }
 
